@@ -7,7 +7,7 @@ Purpose
 To create series of related or dependent objects without specifying
 their concrete classes. Usually the created classes all implement the
 same interface. The client of the abstract factory does not care about
-how these objects are created, he just knows how they go together.
+how these objects are created, it just knows how they go together.
 
 UML Diagram
 -----------
@@ -21,39 +21,27 @@ Code
 
 You can also find this code on `GitHub`_
 
-AbstractFactory.php
+Product.php
 
-.. literalinclude:: AbstractFactory.php
+.. literalinclude:: Product.php
    :language: php
    :linenos:
 
-JsonFactory.php
+ShippableProduct.php
 
-.. literalinclude:: JsonFactory.php
+.. literalinclude:: ShippableProduct.php
    :language: php
    :linenos:
 
-HtmlFactory.php
+DigitalProduct.php
 
-.. literalinclude:: HtmlFactory.php
+.. literalinclude:: DigitalProduct.php
    :language: php
    :linenos:
 
-Text.php
+ProductFactory.php
 
-.. literalinclude:: Text.php
-   :language: php
-   :linenos:
-
-JsonText.php
-
-.. literalinclude:: JsonText.php
-   :language: php
-   :linenos:
-
-HtmlText.php
-
-.. literalinclude:: HtmlText.php
+.. literalinclude:: ProductFactory.php
    :language: php
    :linenos:
 

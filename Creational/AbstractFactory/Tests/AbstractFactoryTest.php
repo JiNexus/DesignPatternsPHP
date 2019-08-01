@@ -2,27 +2,42 @@
 
 namespace DesignPatterns\Creational\AbstractFactory\Tests;
 
-use DesignPatterns\Creational\AbstractFactory\HtmlFactory;
-use DesignPatterns\Creational\AbstractFactory\HtmlText;
-use DesignPatterns\Creational\AbstractFactory\JsonFactory;
-use DesignPatterns\Creational\AbstractFactory\JsonText;
+use DesignPatterns\Creational\AbstractFactory\DigitalProduct;
+use DesignPatterns\Creational\AbstractFactory\ProductFactory;
+use DesignPatterns\Creational\AbstractFactory\ShippableProduct;
 use PHPUnit\Framework\TestCase;
 
 class AbstractFactoryTest extends TestCase
 {
-    public function testCanCreateHtmlText()
+    public function testCanCreateDigitalProduct()
     {
-        $factory = new HtmlFactory();
-        $text = $factory->createText('foobar');
+        $factory = new ProductFactory();
+        $product = $factory->createDigitalProduct(150);
 
-        $this->assertInstanceOf(HtmlText::class, $text);
+        $this->assertInstanceOf(DigitalProduct::class, $product);
     }
 
-    public function testCanCreateJsonText()
+    public function testCanCreateShippableProduct()
     {
-        $factory = new JsonFactory();
-        $text = $factory->createText('foobar');
+        $factory = new ProductFactory();
+        $product = $factory->createShippableProduct(150);
 
-        $this->assertInstanceOf(JsonText::class, $text);
+        $this->assertInstanceOf(ShippableProduct::class, $product);
+    }
+
+    public function testCanCalculatePriceForDigitalProduct()
+    {
+        $factory = new ProductFactory();
+        $product = $factory->createDigitalProduct(150);
+
+        $this->assertEquals(150, $product->calculatePrice());
+    }
+
+    public function testCanCalculatePriceForShippableProduct()
+    {
+        $factory = new ProductFactory();
+        $product = $factory->createShippableProduct(150);
+
+        $this->assertEquals(200, $product->calculatePrice());
     }
 }

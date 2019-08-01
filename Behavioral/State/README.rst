@@ -20,32 +20,45 @@ Code
 
 You can also find this code on `GitHub`_
 
-OrderRepository.php
+OrderContext.php
 
-.. literalinclude:: OrderRepository.php
+.. literalinclude:: OrderContext.php
    :language: php
    :linenos:
 
-Order.php
+State.php
 
-.. literalinclude:: Order.php
+.. literalinclude:: State.php
    :language: php
    :linenos:
 
-ShippingOrder.php
+StateCreated.php
 
-.. literalinclude:: ShippingOrder.php
+.. literalinclude:: StateCreated.php
    :language: php
    :linenos:
 
-CreateOrder.php
+StateShipped.php
 
-.. literalinclude:: CreateOrder.php
+.. literalinclude:: StateShipped.php
+   :language: php
+   :linenos:
+
+StateDone.php
+
+.. literalinclude:: StateDone.php
    :language: php
    :linenos:
 
 Test
 ----
+
+Tests/StateTest.php
+
+.. literalinclude:: Tests/StateTest.php
+   :language: php
+   :linenos:
+
 
 .. _`GitHub`: https://github.com/domnikl/DesignPatternsPHP/tree/master/Behavioral/State
 .. __: http://en.wikipedia.org/wiki/State_pattern

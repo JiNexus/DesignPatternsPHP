@@ -26,7 +26,7 @@ msgid ""
 "To avoid the cost of creating objects the standard way (new Foo()) and "
 "instead create a prototype and clone it."
 msgstr ""
-"Evitar el cote de crear objetos de la forma estandar (new Foo()). En su "
+"Evitar el cote de crear objetos de la forma estándar (new Foo()). En su "
 "lugar crear una instancia y clonarla."
 
 #: ../../Creational/Prototype/README.rst:11
@@ -38,8 +38,8 @@ msgid ""
 "Large amounts of data (e.g. create 1,000,000 rows in a database at once via "
 "a ORM)."
 msgstr ""
-"Grandes cantidades de datos ( ej. crear 1.000.000 de registros en la base de "
-"datos a través del ORM )."
+"Grandes cantidades de datos (ej. crear 1.000.000 de registros en la base de "
+"datos a través del ORM)."
 
 #: ../../Creational/Prototype/README.rst:17
 msgid "UML Diagram"
@@ -52,22 +52,6 @@ msgstr "Código"
 #: ../../Creational/Prototype/README.rst:26
 msgid "You can also find this code on `GitHub`_"
 msgstr "Puedes encontrar el código en `GitHub`_"
-
-#: ../../Creational/Prototype/README.rst:28
-msgid "index.php"
-msgstr "index.php"
-
-#: ../../Creational/Prototype/README.rst:34
-msgid "BookPrototype.php"
-msgstr "BookPrototype.php"
-
-#: ../../Creational/Prototype/README.rst:40
-msgid "BarBookPrototype.php"
-msgstr "BarBookPrototype.php"
-
-#: ../../Creational/Prototype/README.rst:46
-msgid "FooBookPrototype.php"
-msgstr "FooBookPrototype.php"
 
 #: ../../Creational/Prototype/README.rst:53
 msgid "Test"

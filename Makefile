@@ -191,19 +191,16 @@ pseudoxml:
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
-composer.phar:
-	php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-	php -r "if (hash_file('SHA384', 'composer-setup.php') === 'e115a8dc7871f15d853148a7fbac7da27d6c0030b848d9b3dc09e2a0388afed865e6a3d6b3c0fad45c48e2b5fc1196ae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-	php composer-setup.php
-	php -r "unlink('composer-setup.php');"
-
 install: vendor
+
+composer.phar:
+	docker/install-composer.sh
 
 vendor: composer.phar
 	php composer.phar install
 
 cs: install
-	./vendor/bin/phpcs -p --standard=PSR2 --ignore=vendor .
+	./vendor/bin/phpcs -p --standard=PSR2 --ignore=vendor,_build .
 
-test: install cs
+test: install
 	./vendor/bin/phpunit
